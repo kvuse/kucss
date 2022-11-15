@@ -1,0 +1,245 @@
+@mixin font-size($unit:"px") {
+  $sizes: 14, 16, 18, 20, 22, 24, 26, 28;
+
+  @each $size in $sizes {
+    .font-#{$size} {
+      font-size: #{$size}#{$unit};
+    }
+  }
+}
+
+@mixin each-types($types,$prefix:null,$styleName:null) {
+  @each $name,$type in $types {
+    @if $styleName {
+      .#{$prefix}-#{$name} {
+        #{$styleName}: $type;
+      }
+    } @else if $prefix {
+      .#{$name} {
+        #{$prefix}: $type;
+      }
+    } @else {
+      .#{$name} {
+        #{$name}: $type;
+      }
+    }
+  }
+}
+
+// 加粗色
+$color-333: #333;
+$color-666: #666;
+$color-999: #999;
+
+// 颜色
+$color-blue: #409eff;
+$color-red: #f4364c;
+$color-gray: #97a8be;
+$color-yellow: #ffb14d;
+$color-green: #66bf4b;
+$color-white: #fff;
+$border-color: #d8dce5;
+
+// color  background-color
+@mixin text-background($prefix:"c",$styleName:"color") {
+  $colors: (
+    "red":$color-red,
+    "blue":$color-blue,
+    "gray":$color-gray,
+    "yellow":$color-yellow,
+    "green":$color-green,
+    "white":$color-white,
+  );
+
+  @include each-types($colors,$prefix,$styleName);
+}
+
+// other color
+@mixin other-colors($prefix:"color",$styleName:"color") {
+  $colors: (
+    "33":$color-333,
+    "66":$color-666,
+    "99":$color-999,
+  );
+
+  @include each-types($colors,$prefix,$styleName);
+}
+
+@mixin while-types($name:"ml",$styleName:"margin-left",$unit:"px",$i:60,$var:5) {
+  @while $i > 0 {
+    .#{$name}#{$i} {
+      #{$styleName}: #{$i}#{$unit};
+    }
+
+    $i: $i - $var;
+  }
+}
+
+// margin
+@mixin margin-types($unit:"px",$i:60) {
+  $margins: (
+    "ml":"margin-left",
+    "mr":"margin-right",
+    "mt":"margin-top",
+    "mb":"margin-bottom",
+  );
+
+  @each $name,$styleName in $margins {
+    @include while-types($name,$styleName,$unit);
+  }
+}
+
+// padding
+@mixin padding-types($unit:"px",$i:60) {
+  $paddings: (
+    "pl":"padding-left",
+    "pr":"padding-right",
+    "pt":"padding-top",
+    "pb":"padding-bottom",
+  );
+
+  @each $name,$styleName in $paddings {
+    @include while-types($name,$styleName,$unit);
+  }
+}
+
+// padding all
+@mixin padding-all($unit:"px",$i:30) {
+  @include while-types("p","padding",$unit,$i);
+}
+
+// width
+@mixin width-types($unit:"px",$i:300,$var:20) {
+  @include while-types("width-","width",$unit,$i,$var);
+}
+
+// border
+@mixin border-types() {
+  $borders: (
+    "border-left":1px solid $border-color,
+    "border-right":1px solid $border-color,
+    "border-top":1px solid $border-color,
+    "border-bottom":1px solid $border-color,
+    "border-radius":8px,
+  );
+
+  @include each-types($borders);
+}
+
+// text-decoration
+@mixin text-decorations() {
+  $decorations: (
+    "line-through":line-through,
+    "over-line":overline,
+    "under-line":underline,
+  );
+
+  @include each-types($decorations,"text-decoration");
+}
+
+// overflow
+@mixin text-overflows() {
+  $overflows: (
+    "overflow":hidden,
+    "overflow-y":auto,
+  );
+
+  @include each-types($overflows);
+}
+
+// other styles
+@mixin other-styles {
+  .text-overflow {
+    display: inline-block;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .word-wrap {
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+}
+
+//flex布局样式
+//单轴
+@mixin flex-type($type1, $type2) {
+  align-items: $type2;
+  display: flex;
+  justify-content: $type1;
+}
+
+//多轴
+@mixin flex-types($type1, $type2) {
+  align-items: $type2;
+  display: flex;
+  flex-direction: column;
+  justify-content: $type1;
+}
+
+//设置竖直方向
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@mixin flex-styles {
+  .flex {
+    display: flex;
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+
+  .flex-shrink {
+    flex-shrink: 0;
+  }
+
+  .flex-justify-center {
+    @include flex-type(center, null);
+  }
+
+  .flex-align-center {
+    @include flex-type(null, center);
+  }
+
+  .flex-center {
+    @include flex-type(center, center);
+  }
+
+  .flex-start {
+    @include flex-type(flex-start, null);
+  }
+
+  .flex-end {
+    @include flex-type(flex-end, null);
+  }
+
+  .flex-between {
+    @include flex-type(space-between, center);
+  }
+
+  .flexs-justify-center {
+    @include flex-types(center, null);
+  }
+
+  .flexs-align-center {
+    @include flex-types(null, center);
+  }
+
+  .flexs-center {
+    @include flex-types(center, center);
+  }
+
+  .flexs-between {
+    @include flex-types(space-between, center);
+  }
+
+  .flex-column {
+    @include flex-column;
+  }
+}

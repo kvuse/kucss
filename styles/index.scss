@@ -1,0 +1,14 @@
+@import "./mixins/mixins";
+@include font-size;
+@include text-background;
+@include text-background("bg");
+@include other-colors;
+@include margin-types;
+@include padding-types;
+@include padding-all;
+@include width-types;
+@include border-types;
+@include text-decorations;
+@include text-overflows;
+@include other-styles;
+@include flex-styles;
