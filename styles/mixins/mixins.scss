@@ -140,7 +140,7 @@ $border-color: #d8dce5;
 // cursor
 @mixin cursor-types() {
   $cursors: (
-    "pointer":line-through,
+    "pointer":pointer,
     "not-allowed":not-allowed,
   );
 
