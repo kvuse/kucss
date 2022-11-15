@@ -1,6 +1,6 @@
 {
   "name": "kucss",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "常用的css样式",
   "main": "src/index.js",
   "homepage": "https://github.com/kvuse/kucss",

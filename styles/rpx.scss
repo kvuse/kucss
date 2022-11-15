@@ -1,14 +1,2 @@
-@import "./mixins/mixins";
-@include font-size("rpx");
-@include text-background;
-@include text-background("bg");
-@include other-colors;
-@include margin-types("rpx");
-@include padding-types("rpx");
-@include padding-all("rpx");
-@include width-types("rpx");
-@include border-types;
-@include text-decorations;
-@include text-overflows;
-@include other-styles;
-@include flex-styles;
+@import "./mixins/base";
+@include base-style("rpx");

@@ -137,6 +137,16 @@ $border-color: #d8dce5;
   @include each-types($decorations,"text-decoration");
 }
 
+// cursor
+@mixin cursor-types() {
+  $cursors: (
+    "pointer":line-through,
+    "not-allowed":not-allowed,
+  );
+
+  @include each-types($cursors,"cursor");
+}
+
 // overflow
 @mixin text-overflows() {
   $overflows: (

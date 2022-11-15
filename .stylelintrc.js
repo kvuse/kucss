@@ -5,6 +5,7 @@ module.exports = {
     "selector-max-id": 2,
     "at-rule-no-unknown": [true, { ignoreAtRules: ["include", "mixin", "each", "if", "else", "while"] }],
     "unit-no-unknown": [true, { ignoreUnits: ["rpx"] }],
+    "no-duplicate-selectors": null,
     "selector-max-compound-selectors": 4, // 允许伪类嵌套4层
     "max-nesting-depth": [
       4,

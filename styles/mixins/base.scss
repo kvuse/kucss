@@ -1,0 +1,19 @@
+@import "./mixins";
+@import "./normalize";
+
+@mixin base-style($unit:"px") {
+  @include font-size($unit);
+  @include text-background;
+  @include text-background("bg","background-color");
+  @include other-colors;
+  @include margin-types($unit);
+  @include padding-types($unit);
+  @include padding-all($unit);
+  @include width-types($unit);
+  @include border-types;
+  @include text-decorations;
+  @include cursor-types;
+  @include text-overflows;
+  @include other-styles;
+  @include flex-styles;
+}
