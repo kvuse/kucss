@@ -1,5 +1,4 @@
 @import "./mixins";
-@import "./normalize";
 
 @mixin base-style($unit:"px") {
   @include font-size($unit);

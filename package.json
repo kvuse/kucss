@@ -1,21 +1,24 @@
 {
   "name": "kucss",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "常用的css样式",
-  "main": "src/index.js",
+  "main": "src/index.css",
   "homepage": "https://github.com/kvuse/kucss",
   "files": [
     "src"
   ],
   "scripts": {
-    "build": "sass --watch styles:src  --style compressed",
+    "build": "pnpm run build:wxss & pnpm run build:css",
+    "build:css": "sass --watch styles/main:src --style compressed --no-source-map",
+    "build:wxss": "sass --watch styles/wxss.scss src/index.wxss --style compressed --no-source-map",
     "stylelint": "stylelint *.scss --fix"
   },
   "keywords": [
     "css",
     "class",
     "rpx",
-    "upx"
+    "upx",
+    "wxss"
   ],
   "author": "wenxin",
   "license": "ISC",

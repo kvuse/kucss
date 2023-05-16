@@ -36,13 +36,15 @@ pnpm install kucss
 + `rpx` 小程序
   
    ```js
-   import 'kucss/src/rpx.css'
+   import 'kucss/src/index.wxss'
   ```  
 
-+ `upx` uniapp
++ `upx` 或者`rpx` uniapp
   
    ```js
    import 'kucss/src/upx.css'
+   // 或者
+   import 'kucss/src/rpx.css'
   ```  
 
 ## 样式类型
