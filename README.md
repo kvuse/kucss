@@ -36,7 +36,7 @@ pnpm install kucss
 + `rpx` 小程序
   
    ```js
-   import 'kucss/src/index.wxss'
+   import '/miniprogram_npm/kucss/index.wxss'
   ```  
 
 + `upx` 或者`rpx` uniapp
