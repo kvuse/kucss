@@ -196,3 +196,5 @@ pnpm install kucss
   | flexs-center | | 多轴方式：上下左右居中 |
   | flexs-justify-center | | 多轴方式：左右居中 |
   | flexs-align-center | | 多轴方式：上下居中 |
+  | flex-around |  | 多轴方式：两侧的间隔相等 |
+  | flex-between |  | 多轴方式：两端对齐，项目之间的间隔都相等 |

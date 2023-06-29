@@ -209,6 +209,10 @@ $border-color: #d8dce5;
     flex-shrink: 0;
   }
 
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .flex-justify-center {
     @include flex-type(center, null);
   }
@@ -233,6 +237,10 @@ $border-color: #d8dce5;
     @include flex-type(space-between, center);
   }
 
+  .flex-around {
+    @include flex-type(space-around, center);
+  }
+
   .flexs-justify-center {
     @include flex-types(center, null);
   }
@@ -247,6 +255,10 @@ $border-color: #d8dce5;
 
   .flexs-between {
     @include flex-types(space-between, center);
+  }
+
+  .flexs-around {
+    @include flex-types(space-around, center);
   }
 
   .flex-column {
