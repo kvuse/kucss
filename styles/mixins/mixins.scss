@@ -121,6 +121,7 @@ $border-color: #d8dce5;
     "border-top":1px solid $border-color,
     "border-bottom":1px solid $border-color,
     "border-radius":8px,
+    "border":1px solid $border-color,
   );
 
   @include each-types($borders);

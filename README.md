@@ -36,14 +36,14 @@ pnpm install kucss
 + `rpx` 小程序
   
    ```js
+   import '/kucss/index.wxss'
+   // 或者
    import '/miniprogram_npm/kucss/index.wxss'
   ```  
 
-+ `upx` 或者`rpx` uniapp
++ `rpx` uniapp
   
    ```js
-   import 'kucss/src/upx.css'
-   // 或者
    import 'kucss/src/rpx.css'
   ```  
 
@@ -146,6 +146,7 @@ pnpm install kucss
   | border-top  | border-top | 1px solid #d8dce5 |
   | border-bottom  | border-bottom | 1px solid #d8dce5 |
   | border-radius  | border-radius | 8px |
+  | border  | border| 1px solid #d8dce5 |
 
 + Text-decoration 文本修饰
 
@@ -192,9 +193,11 @@ pnpm install kucss
   | flex-justify-center |  | 上下居中 |
   | flex-around |  | 两侧的间隔相等 |
   | flex-between |  | 两端对齐，项目之间的间隔都相等 |
-  | flex-column | flex-decoration: column| 设置flex方向: column |
-  | flexs-center | | 多轴方式：上下左右居中 |
-  | flexs-justify-center | | 多轴方式：左右居中 |
-  | flexs-align-center | | 多轴方式：上下居中 |
-  | flex-around |  | 多轴方式：两侧的间隔相等 |
-  | flex-between |  | 多轴方式：两端对齐，项目之间的间隔都相等 |
+  | flex-start | | 上下居中，左右: flex-start |
+  | flex-end | | 上下居中，左右: flex-end |
+  | flex-column |  |设置flex方向: column |
+  | flexs-center |flex-decoration: column | 多轴方式：上下左右居中 |
+  | flexs-justify-center | flex-decoration: column| 多轴方式：左右居中 |
+  | flexs-align-center | flex-decoration: column| 多轴方式：上下居中 |
+  | flexs-around | flex-decoration: column | 多轴方式：两侧的间隔相等 |
+  | flexs-between | flex-decoration: column | 多轴方式：两端对齐，项目之间的间隔都相等 |
