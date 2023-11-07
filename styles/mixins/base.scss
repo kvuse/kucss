@@ -8,6 +8,7 @@
   @include margin-types($unit);
   @include padding-types($unit);
   @include padding-all($unit);
+  @include padding-margin-parts($unit);
   @include width-types($unit);
   @include border-types;
   @include text-decorations;

@@ -75,6 +75,22 @@ $border-color: #d8dce5;
   }
 }
 
+@mixin while-parts($name, $styleName, $unit, $i:60, $var:5) {
+  @while $i > 0 {
+    $value: if(
+      $name == "mlr" or $name == "plr",
+      0 #{$i}#{$unit},
+      #{$i}#{$unit} 0
+    );
+
+    .#{$name}#{$i} {
+      #{$styleName}: $value;
+    }
+
+    $i: $i - $var;
+  }
+}
+
 // margin
 @mixin margin-types($unit:"px",$i:60) {
   $margins: (
@@ -92,19 +108,33 @@ $border-color: #d8dce5;
 // padding
 @mixin padding-types($unit:"px",$i:60) {
   $paddings: (
-    "pl":"padding-left",
-    "pr":"padding-right",
-    "pt":"padding-top",
-    "pb":"padding-bottom",
+    "plr":"padding",
+    "ptb":"padding",
+    "mlr":"margin",
+    "mtb":"margin",
   );
 
-  @each $name,$styleName in $paddings {
-    @include while-types($name,$styleName,$unit);
+  @each $name, $styleName in $paddings {
+    @include while-types($name, $styleName, $unit);
+  }
+}
+
+// padding part
+@mixin padding-margin-parts($unit:"px",$i:40) {
+  $paddings: (
+    "plr":"padding",
+    "ptb":"padding",
+    "mlr":"margin",
+    "mtb":"margin",
+  );
+
+  @each $name, $styleName in $paddings {
+    @include while-parts($name, $styleName, $unit);
   }
 }
 
 // padding all
-@mixin padding-all($unit:"px",$i:30) {
+@mixin padding-all($unit:"px",$i:60) {
   @include while-types("p","padding",$unit,$i);
 }
 

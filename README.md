@@ -117,7 +117,16 @@ pnpm install kucss
 
   |  class名   | 类型  | 大小  |
   |  :----:  | :----: | :----: |
-  | p5, p10, p15, p20, p25, p30  | padding | 5px, 10px, 15px, 20px, 25px, 30px|
+  | p5, p10, p15, p20, p25, p30, p35, p40, p45, p50, p55, p60  | padding | 5px, 10px, 15px, 20px, 25px, 30px, 35px, 40px, 45px, 50px, 60px|
+
++ padding margin 上下左右部分边距
+
+  |  class名   | 类型  | 大小  |
+  |  :----:  | :----: | :----: |
+  | plr5, plr10, plr15, plr20, plr25, plr30, ... ,  plr60   | padding-left;padding-right | 5px, 10px, 15px, 20px, 25px, 30px, 5px, 40px, 45px, 50px, 60px|
+  | ptb5, ptb10, ptb15, ptb20, ptb25, ptb30, ... ,  ptb60  | padding-top;padding-bottom | 5px, 10px, 15px, 20px, 25px, 30px, 5px, 40px, 45px, 50px, 60px|
+  | mlr5, mlr10, mlr15, mlr20, mlr25, mlr30, ... , mlr60  | margin-left;margin-right | 5px, 10px, 15px, 20px, 25px, 30px, 5px, 40px, 45px, 50px, 60px|
+  | mtb5, mtb10, mtb15, mtb20, mtb25, mtb30, ..., mtb60  | margin-top;margin-bottom | 5px, 10px, 15px, 20px, 25px, 30px, 5px, 40px, 45px, 50px, 60px|
 
 + Width 宽度
 
