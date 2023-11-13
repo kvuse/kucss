@@ -6,6 +6,10 @@
       font-size: #{$size}#{$unit};
     }
   }
+
+  .font-bold {
+    font-weight: bold;
+  }
 }
 
 @mixin each-types($types,$prefix:null,$styleName:null) {

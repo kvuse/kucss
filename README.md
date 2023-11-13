@@ -61,6 +61,7 @@ pnpm install kucss
   | font-22  | font-size | 12px |
   | font-24  | font-size | 12px |
   | font-28  | font-size | 12px |
+  | font-bold  | font-weight | bold |
 
 + Color 颜色
 
