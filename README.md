@@ -54,13 +54,13 @@ pnpm install kucss
   |  class名  | 类型  | 大小  |
   |  :----:  | :----: | :----: |
   | font-12  | font-size | 12px |
-  | font-14  | font-size | 12px |
-  | font-16  | font-size | 12px |
-  | font-18  | font-size | 12px |
-  | font-20  | font-size | 12px |
-  | font-22  | font-size | 12px |
-  | font-24  | font-size | 12px |
-  | font-28  | font-size | 12px |
+  | font-14  | font-size | 14px |
+  | font-16  | font-size | 16px |
+  | font-18  | font-size | 18px |
+  | font-20  | font-size | 20px |
+  | font-22  | font-size | 22px |
+  | font-24  | font-size | 24px |
+  | font-28  | font-size | 28px |
   | font-bold  | font-weight | bold |
 
 + Color 颜色
@@ -146,6 +146,12 @@ pnpm install kucss
   | width-260  | width | 260px |
   | width-280  | width | 280px |
   | width-300  | width | 300px |
+  | width-320  | width | 320px |
+  | width-340  | width | 340px |
+  | width-360  | width | 360px |
+  | width-380  | width | 380px |
+  | width-400  | width | 400px |
+  | width-420  | width | 420px |
 
 + Border 边框
 

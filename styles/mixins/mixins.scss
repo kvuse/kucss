@@ -1,5 +1,5 @@
 @mixin font-size($unit:"px") {
-  $sizes: 14, 16, 18, 20, 22, 24, 26, 28;
+  $sizes: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30;
 
   @each $size in $sizes {
     .font-#{$size} {
@@ -112,10 +112,10 @@ $border-color: #d8dce5;
 // padding
 @mixin padding-types($unit:"px",$i:60) {
   $paddings: (
-    "plr":"padding",
-    "ptb":"padding",
-    "mlr":"margin",
-    "mtb":"margin",
+    "pl":"padding-left",
+    "pt":"padding-top",
+    "mr":"padding-right",
+    "mb":"padding-bottom",
   );
 
   @each $name, $styleName in $paddings {
@@ -124,7 +124,7 @@ $border-color: #d8dce5;
 }
 
 // padding part
-@mixin padding-margin-parts($unit:"px",$i:40) {
+@mixin padding-margin-parts($unit:"px",$i:60) {
   $paddings: (
     "plr":"padding",
     "ptb":"padding",
@@ -143,7 +143,7 @@ $border-color: #d8dce5;
 }
 
 // width
-@mixin width-types($unit:"px",$i:300,$var:20) {
+@mixin width-types($unit:"px",$i:420,$var:20) {
   @include while-types("width-","width",$unit,$i,$var);
 }
 
@@ -170,6 +170,17 @@ $border-color: #d8dce5;
   );
 
   @include each-types($decorations,"text-decoration");
+}
+
+// text-align
+@mixin text-align() {
+  $align: (
+    "text-left":left,
+    "text-right":right,
+    "text-center":center,
+  );
+
+  @include each-types($align,"text-align");
 }
 
 // cursor

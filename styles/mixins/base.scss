@@ -12,6 +12,7 @@
   @include width-types($unit);
   @include border-types;
   @include text-decorations;
+  @include text-align;
   @include cursor-types;
   @include text-overflows;
   @include other-styles;
